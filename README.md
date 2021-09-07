@@ -53,7 +53,7 @@ That is why we put together this project to let an AI predict the quality of a w
 ## Model Tuning
 
 #### 1. Resampling
-* Nº samples = 14946
+* Nº samples = 8342
 
 #### 2. Normalization
 
@@ -67,10 +67,10 @@ That is why we put together this project to let an AI predict the quality of a w
 
 ### Model Evaluation
 #### Training:
-* loss: 0.05 - accuracy: 0.98
+* loss: 0.0047 - accuracy: 0.9996
 
 #### Test:
-* loss: 0.25 - accuracy: 0.95
+* loss: 0.0991 - accuracy: 0.8949
 
 #### Visualization
 
