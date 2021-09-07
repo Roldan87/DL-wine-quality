@@ -29,8 +29,11 @@ That is why we put together this project to let an AI predict the quality of a w
 ### Data
 * wine.csv
 * Nº features = 11
-* Target = Good wine (1) or Bad wine (0)
-* Nº samples = 5318 (test_size = 30%)
+* Nº samples = 5318
+* Target re-labeled: 
+    * good [quality > 6] -> 1
+    * bad [quality < 7]  -> 0
+* test_size = 30%
 
 ### Model Architecture
 * model type = **Sequential**
@@ -50,31 +53,54 @@ That is why we put together this project to let an AI predict the quality of a w
 #### Test:
 * loss: 0.3987 - accuracy: 0.8133
 
+![matrix](assets/base_matrix.png)
+
+
 ## Model Tuning
 
-#### 1. Resampling
+#### 1. Target Vectorization
+* Target = Good wine (1) or Bad wine (0)
+
+#### 2. Resampling (data balance)
 * Nº samples = 8342
+    * 0 - 4310
+    * 1 - 4032
 
-#### 2. Normalization
+#### 3. Data Shuffle
+* pd.sample()
 
-#### 3. Hyper-parameter tuning:
+#### 4. Standardization
+* StandardScaler()
+
+#### 5. Hyper-parameter tuning:
 * Nº Hidden layers = 4
-* Nº units = 32
+* Nº units = 1024/512/64/1
 * acivation = 'tanh'
-* optimizer = rmsprop
-* lr = 0.01
-* epochs = 500
+* optimizer = 'adam'
+* loss = 'mse'
+* kernel_initializer = 'normal'
+* epochs = 100
 
-### Model Evaluation
+## Model Evaluation
 #### Training:
 * loss: 0.0047 - accuracy: 0.9996
 
 #### Test:
 * loss: 0.0991 - accuracy: 0.8949
 
-#### Visualization
+#### Visuals:
 
 ![plot](assets/nn_eval.png)
 
 
 ![matrix](assets/matrix.png)
+
+### RandomForestClassifier
+
+* 0.88 cv score with a standard deviation of 0.01
+
+
+![auc](assets/rfc_curve.png)
+
+![matrix](assets/rfc_matrix.png)
+
