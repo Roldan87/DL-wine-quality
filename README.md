@@ -1,6 +1,6 @@
 # Deep Learning - Wine Quality
 
-![wine](assets/wine.jpg)
+<img src="assets/wine.jpg" alt="wine" width="1024"/>
 
 ## The Mission
 
