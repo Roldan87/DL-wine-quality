@@ -21,8 +21,8 @@ That is why we put together this project to let an AI predict the quality of a w
 * PyTorch
 
 ## Usage
-* wine_quality.py -> DL Neural Network (Keras) model
-* ml_wine.ipynb -> ML (Sklearn) model
+* nn_wine_quality.py -> DL Neural Network (Keras) model
+* ml_wine_quality.ipynb -> ML (Sklearn) model
 
 ## Base Line NN Model (Binary Classification)
 
