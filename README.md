@@ -30,7 +30,7 @@ That is why we put together this project to let an AI predict the quality of a w
 * wine.csv
 * Nº features = 11
 * Nº samples = 5318
-* Target re-labeled: 
+* Target classes: 
     * good [quality > 6] -> 1
     * bad [quality < 7]  -> 0
 * test_size = 30%
@@ -59,16 +59,17 @@ That is why we put together this project to let an AI predict the quality of a w
 ## Model Tuning
 
 #### 1. Target Vectorization
-* Target = Good wine (1) or Bad wine (0)
+* Classes = 1 (good wine) / 0 (bad wine)
 
 #### 2. Resampling (data balance)
-* Nº samples = 18422
+* Nº samples = 15398
     * 0 - 4310
-    * 1 - 14112
+    * 1 - 11088
 
 #### 3. Data Shuffle & Split
 * pd.sample()
 * test_size = 0.3
+* stratify target
 
 #### 4. Standardization
 * StandardScaler()
