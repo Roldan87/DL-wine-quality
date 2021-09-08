@@ -21,10 +21,10 @@ That is why we put together this project to let an AI predict the quality of a w
 * PyTorch
 
 ## Usage
-* nn_wine_keras.ipynb
-* nn_wine_pytorch.ipynb
+* wine_quality.py -> DL Neural Network (Keras) model
+* ml_wine.ipynb -> ML (Sklearn) model
 
-## Base Line Model (Binary Classification)
+## Base Line NN Model (Binary Classification)
 
 ### Data
 * wine.csv
@@ -97,12 +97,19 @@ That is why we put together this project to let an AI predict the quality of a w
 
 ![matrix](assets/matrix.png)
 
-### RandomForestClassifier
+### ML RandomForestClassifier
 
-* 0.88 cv score with a standard deviation of 0.01
+* 0.93 cv score with a standard deviation of 0.01
+* roc_auc_score: 0.926
 
 
 ![auc](assets/rfc_curve.png)
 
 ![matrix](assets/rfc_matrix.png)
 
+### Final Word
+* Neural Network achieved high train and test scores, predicting class 0 ('bad wine') accurately yet the predictions of the class 1 ('good wine') wasn't as accurate as expected.
+* Machine Learning (RandomForestClassifier) model showed high scores as well as more accurate predictions for both classes.
+* The number of data samples wasn't enough for either model, so resampling was necessary in order to achieve good results.
+
+* Note: This challenge was a useful exercise to gain better knowledge of deep learning and the use of neural networks.
