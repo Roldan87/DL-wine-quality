@@ -14,11 +14,14 @@ That is why we put together this project to let an AI predict the quality of a w
 
 ### Python version
 * python 3.9
+
 ### Packages
+* Numpy
 * Pandas
-* Matplotlib
 * Keras - Tensorflow
-* PyTorch
+* Sklearn
+* Matplotlib
+* Seaborn
 
 ## Usage
 * nn_wine_quality.py -> DL Neural Network (Keras) model
@@ -27,7 +30,7 @@ That is why we put together this project to let an AI predict the quality of a w
 ## Base Line NN Model (Binary Classification)
 
 ### Data
-* wine.csv
+* [wine.csv](https://github.com/becodeorg/GNT-Arai-2.31/blob/master/content/additional_resources/datasets/Wine%20Quality/wine.csv)
 * Nº features = 11
 * Nº samples = 5318
 * Target classes: 
@@ -74,7 +77,7 @@ That is why we put together this project to let an AI predict the quality of a w
 #### 4. Standardization
 * StandardScaler()
 
-#### 5. Hyper-parameter tuning:
+#### 5. Hyper-parameter tuning & Architecture:
 * Nº Hidden layers = 4
 * Nº units = 1024/512/64/1
 * acivation = 'tanh'
@@ -110,6 +113,6 @@ That is why we put together this project to let an AI predict the quality of a w
 ### Final Word
 * Neural Network achieved high train and test scores, predicting class 0 ('bad wine') accurately yet the predictions of the class 1 ('good wine') wasn't as accurate as expected.
 * Machine Learning (RandomForestClassifier) model showed high scores as well as more accurate predictions for both classes.
-* The number of data samples wasn't enough for either model, so resampling was necessary in order to achieve good results.
+* The number of data samples wasn't enough for either model, so resampling was necessary in order to achieve better performance.
 
 * Note: This challenge was a useful exercise to gain better knowledge of deep learning and the use of neural networks.
