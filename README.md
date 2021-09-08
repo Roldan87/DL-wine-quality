@@ -53,7 +53,7 @@ That is why we put together this project to let an AI predict the quality of a w
 #### Test:
 * loss: 0.3987 - accuracy: 0.8133
 
-![matrix](assets/base_matrix.png)
+<img src="assets/base_matrix.png" alt="matrix" width="720"/>
 
 
 ## Model Tuning
@@ -93,10 +93,9 @@ That is why we put together this project to let an AI predict the quality of a w
 
 #### Visuals:
 
-![plot](assets/nn_eval.png)
+<img src="assets/nn_eval.png" alt="loss plot" width="720"/>
 
-
-![matrix](assets/matrix.png)
+<img src="assets/matrix.png" alt="matrix" width="720"/>
 
 ### ML RandomForestClassifier
 
