@@ -111,8 +111,10 @@ That is why we put together this project to let an AI predict the quality of a w
 ![matrix](assets/rfc_matrix.png)
 
 ### Final Word
-* Neural Network achieved high train and test scores, predicting class 0 ('bad wine') accurately yet the predictions of the class 1 ('good wine') wasn't as accurate as expected.
+* The number of data samples wasn't enough for either model, so over-sampling was necessary in order to achieve better performance.
+
+* Neural Network achieved high train and test scores; predicting class 0 ('bad wine') accurately yet the predictions of the class 1 ('good wine') wasn't as accurate as expected, even though classes were purposefully unbalanced (more 1s than 0s).
+
 * Machine Learning (RandomForestClassifier) model showed high scores as well as more accurate predictions for both classes.
-* The number of data samples wasn't enough for either model, so resampling was necessary in order to achieve better performance.
 
 * Note: This challenge was a useful exercise to gain better knowledge of deep learning and the use of neural networks.
