@@ -62,9 +62,9 @@ That is why we put together this project to let an AI predict the quality of a w
 * Target = Good wine (1) or Bad wine (0)
 
 #### 2. Resampling (data balance)
-* Nº samples = 8342
+* Nº samples = 17414
     * 0 - 4310
-    * 1 - 4032
+    * 1 - 13104
 
 #### 3. Data Shuffle
 * pd.sample()
@@ -80,13 +80,14 @@ That is why we put together this project to let an AI predict the quality of a w
 * loss = 'mse'
 * kernel_initializer = 'normal'
 * epochs = 100
+* callbacks.EarlyStopping(patience=10)
 
 ## Model Evaluation
 #### Training:
-* loss: 0.0047 - accuracy: 0.9996
+* loss: 0.0023 - accuracy: 0.9998
 
 #### Test:
-* loss: 0.0991 - accuracy: 0.8949
+* loss: 0.0395 - accuracy: 0.9584
 
 #### Visuals:
 
