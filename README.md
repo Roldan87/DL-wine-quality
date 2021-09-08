@@ -62,12 +62,13 @@ That is why we put together this project to let an AI predict the quality of a w
 * Target = Good wine (1) or Bad wine (0)
 
 #### 2. Resampling (data balance)
-* Nº samples = 17414
+* Nº samples = 18422
     * 0 - 4310
-    * 1 - 13104
+    * 1 - 14112
 
-#### 3. Data Shuffle
+#### 3. Data Shuffle & Split
 * pd.sample()
+* test_size = 0.3
 
 #### 4. Standardization
 * StandardScaler()
