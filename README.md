@@ -113,7 +113,7 @@ That is why we put together this project to let an AI predict the quality of a w
 ### Final Word
 * After initial analysis, the basic NN model showed perfect predictions on class 0 (bad wine) and complete wrong predictions on class 1 (good wine). 
 
-* The number of data samples wasn't enough for either model, so **over-sampling** was necessary in order to achieve better performance.
+* The number of data samples wasn't enough for either model, so **over-sampling** was the choice taken in order to achieve better performance.
 
 * **Neural Network** achieved high train and test scores; predicting class 0 ('bad wine') accurately yet the predictions of the class 1 ('good wine') wasn't as accurate as expected, even though classes were purposefully unbalanced (more 1s than 0s).
 
