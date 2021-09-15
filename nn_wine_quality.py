@@ -23,6 +23,7 @@ def read_dataset(path):
     df.reset_index(drop=True)
     return df
 
+# COACHES' NOTES: would it not make more sense to give a threshold as an argument, and then use a lambda to map the df?
 def define_wine_quality(df):
     good_wine = [7,8,9]
     bad_wine = [3,4,5,6]
@@ -33,6 +34,7 @@ def define_wine_quality(df):
 def resampling(df):
     df_good_wine = df[df['quality'] == 1]
     df_bad_wine = df[df['quality'] == 0]
+    # COACHES' NOTES: unlucky number 13, why was this not just an argument? Or better yet; calculated from the ratio between bad and good wines?
     for i in range(13):
         df = df.append(df_good_wine)
     return df
@@ -49,6 +51,7 @@ def split_standardize_data(features, target):
     x_test = scaler.transform(x_test)
     return x_train, x_test, y_train, y_test
 
+# COACHES' NOTES: What is this used for? You'd be better off trusting sklearn's cross val functions.
 def validation_data(x_train, y_train):
     x_val = x_train[:1000]
     partial_x_train = x_train[1000:]
@@ -56,6 +59,7 @@ def validation_data(x_train, y_train):
     partial_y_train = y_train[1000:]
     return x_val, partial_x_train, y_val, partial_y_train
 
+# COACHES' NOTES: I feel as if you could just provide X, y and use your other functions to split them in this function. Also, add arguments for layer sizes, learning rates... so you can use this function for tuning later.
 def build_network(x_val, partial_x_train, y_val, partial_y_train, x_test, y_test):
     model = tf.keras.models.Sequential()
     model.add(layers.Dense(1024, input_dim=11, kernel_initializer='normal', activation='tanh'))
@@ -109,3 +113,6 @@ x_train, x_test, y_train, y_test = split_standardize_data(features, target)
 x_val, partial_x_train, y_val, partial_y_train = validation_data(x_train, y_train)
 history, cm = build_network(x_val, partial_x_train, y_val, partial_y_train, x_test, y_test)
 visualize_results(history, cm)
+
+
+# COACHES' NOTES: Overall, pretty good, but lacking in typing and return value declaration. 
